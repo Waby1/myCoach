@@ -51,5 +51,5 @@ public class WorkoutModel {
 	public void setName(String name) {
 		this.name = name;
 	}
-
+//test msg for commit
 }
