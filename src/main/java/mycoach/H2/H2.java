@@ -30,8 +30,8 @@ public class H2 implements ApplicationListener<ContextRefreshedEvent> {
     @Autowired
     private ExerciceTypeRepository exerciceRepository;
 
-    public H2 (ExerciceTypeRepository popo) {
-        this.exerciceRepository = popo ;
+    public H2 (ExerciceTypeRepository repo) {
+        this.exerciceRepository = repo ;
 
     }
 
