@@ -9,7 +9,7 @@ import mycoach.model.PerformanceModel;
 
 
 public interface PerformanceRepository extends JpaRepository <PerformanceModel, Long> {
-    List<PerformanceModel> findAll();
+   // List<PerformanceModel> findAll();
     
     
 }

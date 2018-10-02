@@ -4,15 +4,11 @@ import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-@Entity
-//je declare a hibernate que l'objet a une correspondance dans la base de données
-
+@Entity 									// je declare a hibernate que l'objet a une correspondance dans la base de  données
 public class ExerciceModel {
 
-	@Id
-	//je declare a hibernate que c la cle primaire de ma table en bdd
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	//incrementation de la sequence dans la bdd +1 a la ref declaré
+	@Id														 // je declare a hibernate que c la cle primaire de ma table en bdd
+	@GeneratedValue(strategy = GenerationType.AUTO) 			// incrementation de la sequence dans la bdd +1 a la ref declaré
 	private Long id;
 
 	private int rep;
@@ -20,8 +16,7 @@ public class ExerciceModel {
 	private int set;
 
 	@JsonIgnore
-	@ManyToOne(fetch = FetchType.LAZY)
-	// la relation entre les tables
+	@ManyToOne(fetch = FetchType.LAZY) 										// la relation entre les tables
 	@JoinColumn(name = "FK_WORKOUT")
 	private WorkoutModel workout;
 

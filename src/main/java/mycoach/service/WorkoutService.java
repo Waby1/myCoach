@@ -19,14 +19,14 @@ public class WorkoutService  {
 		
 	
 	public WorkoutModel save(WorkoutModel workout) {
-		workoutRepository.save(workout);
+		workoutRepository.save(workout);    // ici je persiste le workout en base 
 		
-		for (ExerciceModel exercice : workout.getExercices()){
-			exercice.setWorkout(workout);
+		for (ExerciceModel exercice : workout.getExercices()){     //je boucle sur tous les exercices que je recupere
+			exercice.setWorkout(workout);    //     ici a chaque iteration qui corresponds a 1 exercice  j'affecte l'exercice en cours au workout 
 		
 		} 
 				
-		exerciceRepository.saveAll(workout.getExercices());
+		exerciceRepository.saveAll(workout.getExercices());   // ici je sauvegarde tous les exercices en faisant appel au saveAll de la classe exerciceRepo
 		
 		return workout;
 	}

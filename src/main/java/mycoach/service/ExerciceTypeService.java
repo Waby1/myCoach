@@ -12,19 +12,17 @@ import mycoach.repository.WorkoutRepository;
 
 @Named
 public class ExerciceTypeService {
-	
+
 	@Inject
-	ExerciceTypeRepository exerciceRepository ;
-		
-	
+	ExerciceTypeRepository exerciceRepository;
+
 	public ExerciceTypeModel save(ExerciceTypeModel ex) {
 		exerciceRepository.save(ex);
 		return ex;
 	}
-	
+
 	public List<ExerciceTypeModel> getAll() {
-	
+
 		return exerciceRepository.findAll();
 	}
 }
-

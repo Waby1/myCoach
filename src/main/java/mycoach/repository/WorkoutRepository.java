@@ -11,9 +11,10 @@ import mycoach.model.WorkoutModel;
 @Named
 public interface WorkoutRepository extends JpaRepository<WorkoutModel, Long> {
 	
-	List<WorkoutModel> findByName(String name);
-    List<WorkoutModel> findByNameIgnoreCase(String name);
-	List<WorkoutModel> findAll();
+	//List<WorkoutModel> findAll();
+	//List<WorkoutModel> findByName(String name);
+    //List<WorkoutModel> findByNameIgnoreCase(String name);
+	
 	
 }
 

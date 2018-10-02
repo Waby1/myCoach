@@ -10,7 +10,7 @@ import mycoach.model.ExerciceTypeModel;
 
 @Named
 public interface ExerciceTypeRepository extends JpaRepository <ExerciceTypeModel, Long> {
-	List<ExerciceTypeModel> findByName(String name);
-    List<ExerciceTypeModel> findByNameIgnoreCase(String name);
-	List<ExerciceTypeModel> findAll();
+	//List<ExerciceTypeModel> findByName(String name);
+    //List<ExerciceTypeModel> findByNameIgnoreCase(String name);
+	//List<ExerciceTypeModel> findAll();
 }
