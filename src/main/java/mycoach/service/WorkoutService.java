@@ -3,6 +3,7 @@ package mycoach.service;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.transaction.Transactional;
 
 import mycoach.model.ExerciceModel;
 import mycoach.model.WorkoutModel;
@@ -17,7 +18,7 @@ public class WorkoutService  {
 	@Inject
 	ExerciceRepository exerciceRepository ;
 		
-	
+	@Transactional                                           // je securise ma methode 
 	public WorkoutModel save(WorkoutModel workout) {
 		workoutRepository.save(workout);    // ici je persiste le workout en base 
 		
@@ -26,7 +27,7 @@ public class WorkoutService  {
 		
 		} 
 				
-		exerciceRepository.saveAll(workout.getExercices());   // ici je sauvegarde tous les exercices en faisant appel au saveAll de la classe exerciceRepo
+		exerciceRepository.saveAll(workout.getExercices());   // ici je sauvegarde tous les exercices en faisant appel au saveAll de l'interface exerciceRepo
 		
 		return workout;
 	}
