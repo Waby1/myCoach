@@ -4,6 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import java.util.Date;
+
 import javax.persistence.*;
 
 @Entity
@@ -15,7 +18,9 @@ private Long id;
 
 private String exercice;
 
-private String date;
+private Date date;
+
+
 
 private int max;
 
@@ -23,7 +28,7 @@ public PerformanceModel() {
 	
 }
 
-public PerformanceModel(Long id, String exercice, String date, int max) {
+public PerformanceModel(Long id, String exercice, Date date, int max) {
 	this.id = id ;
 	this.exercice = exercice;
 	this.date = date;
@@ -46,11 +51,11 @@ public void setExercice(String exercice) {
 	this.exercice = exercice;
 }
 
-public String getDate() {
+public Date getDate() {
 	return date;
 }
 
-public void setDate(String date) {
+public void setDate(Date date) {
 	this.date = date;
 }
 
